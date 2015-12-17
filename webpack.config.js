@@ -1,10 +1,9 @@
 
 var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    js: './app/js/site.js'
+    site: './app/js/site.js'
   },
 
   resolve: {
@@ -13,32 +12,25 @@ module.exports = {
 
   output: {
     path: __dirname + '/public',
-    filename: 'js/site.js'
-  },
-
-  node: {
-    fs: 'empty'
+    filename: 'js/[name].js',
+    publicPath: '/'
   },
 
   module: {
     loaders: [
       {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(
-          'css?sourceMap!' +
-          'sass?sourceMap'
-        ),
-        exclude: /node_modules|dist/
+        test: /\.js$/,
+        exclude: /node_modules|public|app\/vendor|dist/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
       },
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules|public|app\/vendor|dist/,
-        loader: 'babel-loader'
+        test: /\.scss$/,
+        exclude: /node_modules|public/,
+        loader: 'file?context=app&name=[name].css!autoprefixer?browsers=last 3 version!sass'
       }
     ]
-  },
-
-  plugins: [
-    new ExtractTextPlugin('css/site.css')
-  ]
+  }
 };

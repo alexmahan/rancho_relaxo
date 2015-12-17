@@ -1,4 +1,3 @@
-require('babel/polyfill');
 require('app/sass/site.scss');
 
-import './components/app';
+import Application from './components/app';

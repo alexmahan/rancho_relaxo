@@ -1,9 +1,9 @@
-import ConsoleLog from '../components/console.log.js';
+import ConsoleLog from '../components/consolelog.js';
 
 /**
 * The very tip top of the A-Frame (short for Application Frame)
 */
-export default class Application
+export default class Application {
 
   /**
   * Create the website for Rancho Relaxo
@@ -20,15 +20,16 @@ export default class Application
     */
 
     this.elem = elem;
-
-    /**
-    * Run this site and make a console log
-    */
-
-    start() {
-      new ConsoleLog(this.elem, this.consoleFunc);
-    }
   }
 
-  let ranchoRelaxo = new Application();
+  /**
+  * Run this site and make a console log
+  */
+
+  start() {
+    this.Logger = new ConsoleLog(this.elem, this.consoleFunc);
+  }
+}
+
+  const ranchoRelaxo = new Application();
   ranchoRelaxo.start();

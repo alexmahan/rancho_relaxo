@@ -1,22 +1,32 @@
 export default class ConsoleLog {
 	
-	@param {Element}
-	@param {Function}
-	@constructor
+ /**
+  * Create the website for Rancho Relaxo
+  * @param {Element} elem - the root element, save this for later
+  * @param {Function}
+  * @constructor
+  */
+
 	
 	constructor(elem=document.body, consoleFunc) {
-		@type {Element}
-		@private
+	  /**
+	  * The root element
+	  * @type {Element}
+	  * @private
+	  */
 		
-	this.elem = elem;
+		this.elem = elem;
+		this.consoleFunc = consoleFunc;
+		this.start();
 	}
 
-		@type {Function}
-		@private
+    /**
+    * @type {Function}
+    * @private
+    */
 
-	this.consoleFunc = consoleFunc
-
-	if (this.consoleFunc) {
+  start() {
 		console.log("It's working");
-	}		
+  }
+
 }
