@@ -1,3 +1,8 @@
+body {
+  font-family: 'Rubik', Arial, Helvetica, Verdana, sans-serif;
+  font-weight: 300;
+}
+
 header {
   background: transparent url("../images/rr_large.jpg") center center no-repeat;
   background-size: cover;
@@ -6,23 +11,39 @@ header {
   top: 0;
   right: 0;
   bottom: 0;
-  text-align: center;
 }
 
 .intro {
-  color: #fff;
+  font-family: 'Sansita One', cursive;
   position: absolute;
+  text-align: center;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.intro h1,
+.intro h2 {
+  text-shadow: 0 1px 1px #000;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: normal;
+}
+
+.intro h1 {
+  font-size: 50px;
+}
+
+.intro h2 {
+  font-size: 30px;
 }
 
 .btn-link {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 2px;
-  color: #000;
+  color: #333;
   display: inline-block;
-  margin-top: 40px;
+  font-size: 20px;
+  margin-top: 32px;
   text-decoration: none;
   padding: 16px 24px;
   transition: background 200ms ease-out;
@@ -35,4 +56,11 @@ header {
 .welcome {
   position: absolute;
   top: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
 }
