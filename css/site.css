@@ -3,6 +3,11 @@ body {
   font-weight: 300;
 }
 
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
 header {
   background: transparent url("../images/rr_large.jpg") center center no-repeat;
   background-size: cover;
