@@ -66,20 +66,31 @@ header {
 }
 
 .main a {
-  border-bottom: 1px dotted #cc3300;
-  color: #cc3300;
+  border-bottom: 1px dotted #769cb7;
+  color: #0fa6c4;
   text-decoration: none;
 }
 
 .main a:hover {
-  background: #cc3300;
-  color: #fff;
+  border-bottom: 1px solid #769cb7;
 }
 
 .main p,
 .main li {
   font-size: 18px;
   line-height: 1.6;
+}
+
+.links {
+  padding-left: 24px;
+}
+
+.links li {
+  background: transparent url("../images/list-icon.png") left 50% no-repeat;
+  background-size: 14px 14px;
+  list-style: none;
+  margin-bottom: 8px;
+  padding-left: 28px;
 }
 
 .wrapper {
@@ -113,6 +124,10 @@ header {
 
   .intro h2 {
     font-size: 25px;
+  }
+
+  .links {
+    padding-left: 0;
   }
 
   .btn-link {
